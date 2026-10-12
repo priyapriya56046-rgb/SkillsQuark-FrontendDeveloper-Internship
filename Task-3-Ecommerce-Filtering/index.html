@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - Product Filtering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛍️ ShopEasy</h1>
+    <p>Find your favourite products</p>
+  </header>
+
+  <main>
+    <section class="filters">
+      <h2>Filter Products</h2>
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="all">All Products</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Accessories">Accessories</option>
+      </select>
+
+      <label for="price">Maximum Price: ₹<span id="price-value">5000</span></label>
+      <input type="range" id="price" min="100" max="5000" value="5000" step="100">
+
+      <button id="reset" type="button">Reset Filters</button>
+    </section>
+
+    <p id="count">Loading products...</p>
+    <section id="products" class="products"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
